@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import os
+import uvicorn
 
 app = FastAPI()
 
@@ -16,7 +18,7 @@ def read_root():
     return {"message": "Test works!"}
 
 @app.get("/api/hello")
-def read_root():
+def read_hello():
     return {"message": "Hello from FastAPI!"}
 
 if __name__ == "__main__":
